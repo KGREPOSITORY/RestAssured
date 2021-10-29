@@ -6,6 +6,7 @@ import frame.Requests;
 import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import steps.VoteSteps;
 
 import java.util.logging.Logger;
 
@@ -14,6 +15,7 @@ public class BaseTest {
     protected static Requests requests;
     protected Form voteForm;
     protected static Logger logger = Logger.getLogger("Step logger");
+    protected VoteSteps voteSteps = new VoteSteps();
 
 
     @BeforeClass
