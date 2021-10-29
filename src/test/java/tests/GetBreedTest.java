@@ -14,7 +14,7 @@ public class GetBreedTest extends BaseTest{
 
     @Test
     @Description("Check that expected breed is present")
-    @Severity(value = SeverityLevel.CRITICAL)
+    @Severity(value = SeverityLevel.BLOCKER)
     public void getBreedTest(){
         logger.info("Get all breeds");
         Response response = requests.getBreedList();
