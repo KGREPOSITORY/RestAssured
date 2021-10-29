@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 
 public class GetBreedTest extends BaseTest{
-    String expectedName = "abob";
+    String expectedName = "abob2";
 
     @Test
     public void getBreedTest(){
