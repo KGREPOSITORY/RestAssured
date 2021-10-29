@@ -1,6 +1,8 @@
 package tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
@@ -12,6 +14,7 @@ public class GetBreedTest extends BaseTest{
 
     @Test
     @Description("Check that expected breed is present")
+    @Severity(value = SeverityLevel.CRITICAL)
     public void getBreedTest(){
         logger.info("Get all breeds");
         Response response = requests.getBreedList();
