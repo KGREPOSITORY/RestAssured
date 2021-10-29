@@ -36,7 +36,7 @@ public class Requests {
         return apiRequests.postRequest(Endpoint.VOTE, form);
     }
 
-    @Step("Perform delete request for vote with {voiteId.id} id")
+    @Step("Perform delete request for vote with {voiteId} id")
     public Response deleteVote(int voiteId){
         return apiRequests.deleteRequest(Endpoint.VOTE, voiteId);
     }
