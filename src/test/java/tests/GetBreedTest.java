@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
@@ -10,6 +11,7 @@ public class GetBreedTest extends BaseTest{
     String expectedName = "abob2";
 
     @Test
+    @Description("Check that expected breed is present")
     public void getBreedTest(){
         logger.info("Get all breeds");
         Response response = requests.getBreedList();

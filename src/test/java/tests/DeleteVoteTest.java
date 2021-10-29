@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
@@ -7,6 +8,7 @@ import org.testng.annotations.Test;
 public class DeleteVoteTest extends BaseTest {
 
     @Test
+    @Description("Check that it is possible to delete vote")
     public void deleteVoiteTest(){
         logger.info("Create new voite");
         Response response = requests.createVote(voteForm);

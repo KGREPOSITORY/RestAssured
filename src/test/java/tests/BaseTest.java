@@ -3,6 +3,7 @@ package tests;
 import Froms.Form;
 import Froms.VoteForm;
 import frame.Requests;
+import io.qameta.allure.Step;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
@@ -16,11 +17,13 @@ public class BaseTest {
 
 
     @BeforeClass
+    @Step("Prepare vote class form")
     public void init(){
         voteForm = new VoteForm("asf2","my-user-1234", 1 );
     }
 
     @BeforeTest()
+    @Step("Prepare requests class")
     public void initRequest(){
         requests = new Requests();
     }
