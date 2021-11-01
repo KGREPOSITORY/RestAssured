@@ -1,6 +1,8 @@
 package tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 public class DeleteVoteTest extends BaseTest {
 
     @Test
+    @Severity(SeverityLevel.MINOR)
     @Description("Check that it is possible to delete vote")
     public void deleteVoiteTest(){
         logger.info("Create new voite");

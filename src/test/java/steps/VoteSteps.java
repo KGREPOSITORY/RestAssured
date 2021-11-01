@@ -7,7 +7,8 @@ import org.testng.Assert;
 
 public class VoteSteps {
 
-    @Step
+
+    @Step("Assert that input objects are equals")
     public void assertThatObjectsAreEquals(VoteForm voteForm1, VoteForm voteForm2){
         Assert.assertTrue(voteForm1.equals(voteForm2));
     }
