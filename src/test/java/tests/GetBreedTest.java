@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 
 public class GetBreedTest extends BaseTest{
-    String expectedName = "abob2";
+    String expectedName = "abob";
 
     @Test
     @Description("Check that expected breed is present")
