@@ -2,7 +2,6 @@ package tests;
 
 import Froms.VoteForm;
 import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ public class CreateVoteTest extends BaseTest{
 
     @Test
     @Description("Check that it is possible to create new vote")
-    @Step("test step desription")
     public void createVoteTest(){
         logger.info("Create new voite");
         Response response = requests.createVote(voteForm);

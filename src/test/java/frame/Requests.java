@@ -2,7 +2,6 @@ package frame;
 
 import Froms.Form;
 import enums.Endpoint;
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -21,7 +20,7 @@ public class Requests {
     private ApiRequests apiRequests = new ApiRequests(requestSpecification);
 
 
-    @Step("Perform get breed list request ")
+    @Step("Perform get breed list request")
     public Response getBreedList(){
         return apiRequests.getRequest(Endpoint.BREEDS);
     }
