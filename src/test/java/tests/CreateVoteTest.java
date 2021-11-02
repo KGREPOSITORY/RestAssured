@@ -1,6 +1,5 @@
 package tests;
 
-import Froms.Form;
 import Froms.VoteForm;
 import io.qameta.allure.Description;
 import io.restassured.response.Response;

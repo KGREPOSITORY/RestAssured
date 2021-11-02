@@ -1,12 +1,10 @@
 package tests;
 
-import Froms.Form;
 import Froms.VoteForm;
 import frame.Requests;
 import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import steps.VoteSteps;
 
