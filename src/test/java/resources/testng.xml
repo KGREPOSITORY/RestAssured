@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite">
-    <test name="Test">
-        <packages>
-            <package name="tests"/>
-        </packages>
+    <parameter name="SomeParameter" value="abob" />
+    <test name="Delete vote test">
+        <classes>
+            <class name="tests.DeleteVoteTest"/>
+        </classes>
+    </test>
+    <test name="Create vote test">
+        <classes>
+            <class name="tests.CreateVoteTest"/>
+        </classes>
     </test>
 </suite>

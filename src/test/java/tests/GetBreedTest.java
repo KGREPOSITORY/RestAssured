@@ -6,16 +6,17 @@ import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
 public class GetBreedTest extends BaseTest{
-    String expectedName = "abob";
 
     @Test
     @Description("Check that expected breed is present")
     @Severity(value = SeverityLevel.BLOCKER)
-    public void getBreedTest(){
+    @Parameters({"SomeParameter"})
+    public void getBreedTest(String expectedName){
         logger.info("Get all breeds");
         Response response = requests.getBreedList();
 

@@ -1,5 +1,6 @@
 package tests;
 
+import Froms.VoteForm;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -9,10 +10,12 @@ import org.testng.annotations.Test;
 
 public class DeleteVoteTest extends BaseTest {
 
-    @Test
+    @Test(dataProvider = "Vote data", dataProviderClass = BaseTest.class)
     @Severity(SeverityLevel.MINOR)
     @Description("Check that it is possible to delete vote")
-    public void deleteVoiteTest(){
+    public void deleteVoiteTest(VoteForm voteForm){
+
+
         logger.info("Create new voite");
         Response response = requests.createVote(voteForm);
 
@@ -27,7 +30,5 @@ public class DeleteVoteTest extends BaseTest {
         logger.info("Assert that voite was deleted");
         response = requests.getVote(id);
         response.then().statusCode(HttpStatus.SC_NOT_FOUND);
-
-
     }
 }
