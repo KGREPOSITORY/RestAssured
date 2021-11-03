@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite">
     <parameter name="SomeParameter" value="abob" />
-    <parameter name="BreedName" value="Aegean" />
+    <parameter name="BreedName" value="Bengal" />
     <test name="Create vote test">
         <classes>
             <class name="tests.VoteTests.CreateVoteTest"/>
