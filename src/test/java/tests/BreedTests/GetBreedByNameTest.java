@@ -17,6 +17,6 @@ public class GetBreedByNameTest extends BaseBreedTest {
         logger.info("Try to get breed by " + name + " BreedName");
         Response response = breedSteps.getBreedByName(name);
         response.then().assertThat().statusCode(HttpStatus.SC_OK);
-        assertEquals(response.jsonPath().get("BreedName").toString(), name);
+        assertEquals(response.jsonPath().get("name").toString(), '['+name+']');
     }
 }
