@@ -12,4 +12,11 @@ public class BreedAPISteps extends BaseRequest{
     public Response getBreedList(){
         return apiRequests.getRequest(Endpoint.BREEDS);
     }
+
+
+    @Step("Get breed by {name} name ")
+    public Response getBreedByName(String name){
+        return apiRequests.getRequest(Endpoint.BREED_BY_NAME, name);
+
+    }
 }

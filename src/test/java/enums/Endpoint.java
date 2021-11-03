@@ -2,6 +2,7 @@ package enums;
 
 public enum Endpoint {
     BREEDS("breeds"),
+    BREED_BY_NAME("breeds?q={name}"),
     VOTE("votes"),
     CATEGORIES("categories");
 

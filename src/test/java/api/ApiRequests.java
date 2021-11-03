@@ -23,12 +23,20 @@ public class ApiRequests {
                     .get(endpoint.getEndpoint());
     }
 
+    public Response getRequest(Endpoint endpoint, String value){
+        return RestAssured
+                .given()
+                .when()
+                .and().log().all()
+                .get(endpoint.getEndpoint(), value);
+    }
+
     public Response getRequest(Endpoint endpoint, int value){
         return RestAssured
                 .given()
                 .when()
                 .and().log().all()
-                .get(endpoint.getEndpoint()+"/"+value);
+                .get(endpoint.getEndpoint()+'/'+ value);
     }
 
     public Response postRequest(Endpoint endpoint, Form pojo){
