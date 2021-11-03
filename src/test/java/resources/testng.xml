@@ -2,14 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite">
     <parameter name="SomeParameter" value="abob" />
-    <test name="Delete vote test">
-        <classes>
-            <class name="tests.DeleteVoteTest"/>
-        </classes>
-    </test>
     <test name="Create vote test">
         <classes>
-            <class name="tests.CreateVoteTest"/>
+            <class name="tests.VoteTests.CreateVoteTest"/>
+            <class name="tests.VoteTests.DeleteVoteTest"/>
+            <class name="tests.BreedTests.GetBreedTest"/>
         </classes>
     </test>
 </suite>

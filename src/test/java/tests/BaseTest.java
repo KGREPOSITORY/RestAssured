@@ -1,27 +1,14 @@
 package tests;
 
 import Froms.VoteForm;
-import frame.Requests;
-import io.qameta.allure.Step;
 import org.testng.Assert;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import steps.VoteSteps;
 
 import java.util.logging.Logger;
 
 
 public class BaseTest extends Assert {
-    protected static Requests requests;
     protected static Logger logger = Logger.getLogger("Step logger");
-    protected VoteSteps voteSteps = new VoteSteps();
-
-
-    @BeforeSuite
-    @Step("Prepare requests class")
-    public void initRequest(){
-        requests = new Requests();
-    }
 
 
     @DataProvider(name = "Vote list with valid data")

@@ -1,4 +1,4 @@
-package frame;
+package api;
 
 import Froms.Form;
 import enums.Endpoint;
@@ -8,15 +8,15 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 
-public class ApiRequests extends APIConfigs {
+public class ApiRequests {
 
 
-    protected ApiRequests( RequestSpecification requestSpecification) {
-        super(requestSpecification);
+    public ApiRequests(RequestSpecification requestSpecification){
+        RestAssured.requestSpecification = requestSpecification;
     }
 
     public Response getRequest(Endpoint endpoint){
-        return RestAssured
+       return RestAssured
                 .given()
                     .when()
                 .and().log().all()
@@ -47,6 +47,4 @@ public class ApiRequests extends APIConfigs {
                 .delete(endpoint.getEndpoint() +'/'+value);
 
     }
-
-
 }
